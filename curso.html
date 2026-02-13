@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso - CodeCraft</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <style>
+      ::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white font-sans">
+    <header class="relative">
+      <div
+        class="flex justify-between items-center p-4 max-w-7xl mx-auto group"
+      >
+        <div class="flex items-center">
+          <a
+            href="index.html"
+            class="font-bold text-2xl hover:text-gray-300 transition"
+            >CodeCraft</a
+          >
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+        <label
+          for="menu-toggle"
+          class="z-110 cursor-pointer text-white md:hidden"
+        >
+          <div class="group-has-[:checked]:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M3 5h18v2H3zm0 6h18v2H3zm0 6h18v2H3z"></path>
+            </svg>
+          </div>
+          <div class="hidden group-has-[:checked]:block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m7.76 14.83-2.83 2.83 1.41 1.41 2.83-2.83 2.12-2.12.71-.71.71.71 1.41 1.42 3.54 3.53 1.41-1.41-3.53-3.54-1.42-1.41-.71-.71 5.66-5.66-1.41-1.41L12 10.59 6.34 4.93 4.93 6.34 10.59 12l-.71.71z"
+              ></path>
+            </svg>
+          </div>
+        </label>
+
+        <div
+          class="fixed inset-0 bg-black z-100 hidden peer-checked:flex flex-col items-center justify-center gap-10 md:static md:flex md:flex-row"
+        >
+          <nav
+            class="flex flex-col gap-8 text-center text-sm font-bold md:flex-row md:items-center"
+          >
+            <a href="/index.html">Acerca de</a>
+            <a href="#" class="bg-gray-200 text-black py-3 px-8 rounded-full"
+              >Mi Perfil</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="p-4 max-w-7xl mx-auto min-h-screen">
+      <div class="mt-8 mb-8">
+        <p
+          class="text-gray-400 text-sm font-bold uppercase tracking-wider mb-2"
+        >
+          Desarrollo Web
+        </p>
+        <h1 class="text-3xl md:text-5xl font-bold">Domina CSS desde cero</h1>
+      </div>
+
+      <section class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 md:p-8 mb-12 relative z-30 shadow-2xl">
+        <div class="flex items-center gap-3 mb-6 border-b border-zinc-800 pb-4">
+            <div class="bg-blue-600/20 p-2 rounded-lg text-blue-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white">Ficha de Inscripción</h3>
+                <p class="text-xs text-gray-400">Completa tus datos para generar tu matrícula</p>
+            </div>
+        </div>
+        
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="flex flex-col gap-2">
+                <label for="firstname" class="text-xs font-bold text-gray-400 uppercase tracking-wide">Nombre</label>
+                <input type="text" id="firstname" placeholder="Tu nombre" class="bg-black border border-zinc-700 rounded-lg p-3 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition w-full">
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="lastname" class="text-xs font-bold text-gray-400 uppercase tracking-wide">Apellidos</label>
+                <input type="text" id="lastname" placeholder="Tus apellidos" class="bg-black border border-zinc-700 rounded-lg p-3 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition w-full">
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="email" class="text-xs font-bold text-gray-400 uppercase tracking-wide">Correo Electrónico</label>
+                <input type="email" id="email" placeholder="alex@codecraft.com" class="bg-black border border-zinc-700 rounded-lg p-3 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition w-full">
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="phone" class="text-xs font-bold text-gray-400 uppercase tracking-wide">Teléfono Móvil</label>
+                <input type="tel" id="phone" placeholder="+34 600 000 000" class="bg-black border border-zinc-700 rounded-lg p-3 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition w-full">
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="birthdate" class="text-xs font-bold text-gray-400 uppercase tracking-wide">Fecha de Nacimiento</label>
+                <input type="date" id="birthdate" class="bg-black border border-zinc-700 rounded-lg p-3 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition w-full">
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="level" class="text-xs font-bold text-gray-400 uppercase tracking-wide">Nivel de Conocimientos</label>
+                <div class="relative">
+                    <select id="level" class="bg-black border border-zinc-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition w-full appearance-none cursor-pointer">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="beginner">Principiante (Desde cero)</option>
+                        <option value="intermediate">Intermedio (Ya sé HTML/CSS)</option>
+                        <option value="advanced">Avanzado (Trabajo en el sector)</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gray-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 flex items-start gap-3 mt-2">
+                <div class="flex items-center h-5">
+                    <input id="terms" type="checkbox" class="w-4 h-4 border border-zinc-600 rounded bg-black focus:ring-3 focus:ring-blue-500 ring-offset-zinc-900 accent-blue-600 cursor-pointer">
+                </div>
+                <label for="terms" class="text-xs text-gray-400">
+                    Acepto la <a href="#" class="text-white hover:underline">Política de Privacidad</a> y los <a href="#" class="text-white hover:underline">Términos del Servicio</a>. Entiendo que recibiré acceso al contenido tras validar mi cuenta.
+                </label>
+            </div>
+
+            <div class="md:col-span-2 flex justify-end mt-4">
+                <button type="button" class="bg-white text-black font-bold py-3 px-10 rounded-full w-full md:w-auto hover:bg-gray-200 transition shadow-lg hover:shadow-white/20 transform hover:-translate-y-0.5 cursor-pointer">
+                    Finalizar Inscripción
+                </button>
+            </div>
+        </form>
+      </section>
+      <div class="relative">
+        
+        <div class="absolute inset-0 z-20 flex flex-col items-center pt-20">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black z-10 rounded-xl"></div>
+            
+            <div class="relative z-20 bg-zinc-950/80 border border-zinc-700 p-8 rounded-2xl text-center max-w-md mx-4 backdrop-blur-md shadow-2xl">
+                <div class="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-6 text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">Contenido Bloqueado</h3>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                    Completa tus datos en el formulario superior para acceder a los módulos avanzados, recursos descargables y certificaciones.
+                </p>
+                <button class="bg-white text-black font-bold py-3 px-8 rounded-full w-full hover:bg-gray-200 transition shadow-lg hover:shadow-white/20 cursor-not-allowed opacity-50">
+                    Pendiente de Registro
+                </button>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:grid md:grid-cols-3 gap-8 filter blur-[3px] opacity-40 select-none pointer-events-none grayscale-[50%]">
+            <div class="md:col-span-2 flex flex-col gap-4">
+            <a href="#" class="bg-zinc-900 p-6 rounded-xl border border-zinc-800">
+                <div class="flex justify-between items-start">
+                <div>
+                    <span class="text-xs font-bold text-gray-500 mb-1 block">MÓDULO 1</span>
+                    <h3 class="text-xl font-bold mb-2 transition">Introducción y Selectores</h3>
+                    <p class="text-sm text-gray-400">Aprende cómo funciona el navegador y cómo seleccionar elementos.</p>
+                </div>
+                <div class="bg-black p-2 rounded-full text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                </div>
+                </div>
+            </a>
+
+            <a href="#" class="bg-zinc-900 p-6 rounded-xl border border-zinc-800">
+                <div class="flex justify-between items-start">
+                <div>
+                    <span class="text-xs font-bold text-gray-500 mb-1 block">MÓDULO 2</span>
+                    <h3 class="text-xl font-bold mb-2 transition">Box Model & Flexbox</h3>
+                    <p class="text-sm text-gray-400">Domina el espaciado, bordes y la distribución flexible.</p>
+                </div>
+                <div class="bg-zinc-800 p-2 rounded-full text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-10 0v-4c0-2.206 1.794-4 4-4s4 1.794 4 4v4h-8z"/></svg>
+                </div>
+                </div>
+            </a>
+
+            <a href="#" class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 opacity-75">
+                <div class="flex justify-between items-start">
+                <div>
+                    <span class="text-xs font-bold text-gray-500 mb-1 block">MÓDULO 3</span>
+                    <h3 class="text-xl font-bold mb-2">CSS Grid Layout</h3>
+                    <p class="text-sm text-gray-400">Crea grillas complejas bidimensionales con facilidad.</p>
+                </div>
+                <div class="bg-zinc-800 p-2 rounded-full text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-10 0v-4c0-2.206 1.794-4 4-4s4 1.794 4 4v4h-8z"/></svg>
+                </div>
+                </div>
+            </a>
+
+            <a href="#" class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 opacity-75">
+                <div class="flex justify-between items-start">
+                <div>
+                    <span class="text-xs font-bold text-gray-500 mb-1 block">MÓDULO 4</span>
+                    <h3 class="text-xl font-bold mb-2">Animaciones y Responsive</h3>
+                    <p class="text-sm text-gray-400">Da vida a tu web y adáptala a cualquier dispositivo.</p>
+                </div>
+                <div class="bg-zinc-800 p-2 rounded-full text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-10 0v-4c0-2.206 1.794-4 4-4s4 1.794 4 4v4h-8z"/></svg>
+                </div>
+                </div>
+            </a>
+            </div>
+
+            <aside class="md:col-span-1">
+            <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sticky top-6">
+                <h4 class="font-bold text-lg mb-4">Tu Progreso</h4>
+                <div class="flex justify-between text-sm text-gray-400 mb-2">
+                    <span>0% Completado</span>
+                    <span>0/4 Módulos</span>
+                </div>
+                <div class="w-full bg-black rounded-full h-2.5 mb-6">
+                    <div class="bg-white h-2.5 rounded-full" style="width: 5%"></div>
+                </div>
+                <button class="w-full bg-white text-black font-bold py-3 rounded-full hover:bg-gray-200 transition">Continuar Curso</button>
+                <div class="mt-6 pt-6 border-t border-zinc-800">
+                    <h5 class="font-bold text-sm mb-2">Recursos</h5>
+                    <ul class="text-sm text-gray-400 flex flex-col gap-2">
+                        <li class="hover:text-white cursor-pointer flex items-center gap-2">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            Comunidad Discord
+                        </li>
+                        <li class="hover:text-white cursor-pointer flex items-center gap-2">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                            Archivos del curso
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </aside>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="p-8 border-t border-zinc-800 mt-12">
+      <div class="flex flex-col items-center gap-6">
+        <nav
+          class="flex flex-wrap justify-center gap-4 text-sm text-gray-400 font-medium"
+        >
+          <a href="#">Contáctanos</a>
+          <a href="#">Términos y Condiciones</a>
+          <a href="#">Política de privacidad</a>
+        </nav>
+        <p class="text-gray-600 text-sm">
+          © 2026 CodeCraft. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

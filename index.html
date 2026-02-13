@@ -62,8 +62,10 @@
           <nav
             class="flex flex-col gap-8 text-center text-sm font-bold md:flex-row md:items-center"
           >
-            <a href="#">Acerca de</a>
-            <a href="#" class="bg-gray-200 text-black py-3 px-8 rounded-full"
+            <a href="/index.html">Acerca de</a>
+            <a
+              href="curso.html"
+              class="bg-gray-200 text-black py-3 px-8 rounded-full hover:cursor-pointer"
               >Ingresa al curso</a
             >
           </nav>
@@ -73,26 +75,32 @@
 
     <main class="p-4">
       <section
-        class="relative h-[500px] flex items-center overflow-hidden rounded-[3rem] mt-6"
+        class="relative h-[500px] flex items-center md:items-end overflow-hidden rounded-[3rem] mt-6"
       >
         <img
           src="imagen.jpg"
           class="absolute inset-0 w-full h-full object-cover opacity-40"
         />
 
-        <div class="relative z-10 p-6 text-center">
-          <h2 class="font-bold text-3xl mb-6">Domina CSS desde 0</h2>
+        <div
+          class="relative z-10 p-6 text-center md:text-left md:w-full md:max-w-[75%] md:mb-10"
+        >
+          <h2 class="font-bold text-4xl mb-6 md:text-5xl">
+            Domina CSS desde cero
+          </h2>
           <p class="text-gray-200 mb-10 text-md">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
             consectetur, voluptatem porro quam cumque expedita inventore
             doloremque facilis soluta? Ipsa sequi quibusdam temporibus quis iste
             sapiente placeat amet eum soluta?
           </p>
-          <button
-            class="bg-gray-300 text-black font-bold py-4 px-12 rounded-full"
-          >
-            Inscríbete ahora
-          </button>
+          <a href="curso.html" class="hover:cursor-pointer">
+            <button
+              class="bg-gray-300 text-black font-bold py-4 px-12 rounded-full"
+            >
+              Inscríbete ahora
+            </button>
+          </a>
         </div>
       </section>
 
@@ -105,9 +113,9 @@
           </p>
         </div>
 
-        <div class="flex flex-col gap-8 md:grid md:grid-cols-2 md:gap-5">
+        <div class="flex flex-wrap gap-5">
           <div
-            class="bg-zinc-900 p-7 rounded-xl flex flex-col gap-4 max-w-[320px] mx-auto"
+            class="bg-zinc-900 p-7 rounded-xl flex flex-col gap-4 max-w-[320px] mx-auto md:wrap"
           >
             <div class="text-white mt-4">
               <svg
@@ -215,7 +223,7 @@
     </main>
 
     <footer class="p-8">
-      <div class="flex flex-col items-center gap-6">
+      <div class="flex flex-col items-center ">
         <nav
           class="flex flex-wrap justify-center gap-4 text-sm text-gray-400 font-medium"
         >
